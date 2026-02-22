@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
 <title>Zeeshan Ahmad | DevOps Engineer</title>
 <link rel="icon" type="image/png" href="iconf.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,7 +23,7 @@ section{padding:130px 10%;max-width:1250px;margin:auto;opacity:0;transform:trans
 section.show{opacity:1;transform:none}
 
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.avatar{width:360px;height:360px;border-radius:50%;object-fit:cover;border:3px solid #6366f1;margin-bottom:28px;box-shadow:0 0 35px rgba(99,102,241,.6)}
+.avatar{width:260px;height:260px;border-radius:50%;object-fit:cover;border:3px solid #6366f1;margin-bottom:28px;box-shadow:0 0 35px rgba(99,102,241,.6)}
 .hero h1{font-size:54px;font-weight:700}
 .hero span{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .typing{margin-top:10px;color:#94a3b8;font-size:18px}
@@ -45,41 +47,105 @@ section.show{opacity:1;transform:none}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:25px;text-align:center}
 .stat h3{font-size:44px;color:#6366f1;text-shadow:0 0 15px rgba(99,102,241,.6)}
 
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.p-card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));padding:28px;border-radius:22px;border:1px solid rgba(255,255,255,.08);transition:.45s;position:relative;overflow:hidden}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(380px, 1fr));
+  gap: 40px;
+}
+.p-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  padding:28px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.45s;
+  position:relative;
+  overflow:hidden;
+}
+
+#work .p-card {
+  padding: 32px;
+}
+
+
 .p-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx) var(--my),rgba(99,102,241,.35),transparent 40%);opacity:0;transition:.4s}
 .p-card:hover::before{opacity:1}
 .p-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 0 35px rgba(99,102,241,.7)}
 
 
+.p-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+}
+
+
+.terminal-line {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 18px;
+    color: #94a3b8;
+    white-space: nowrap;
+    height: 26px;
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.terminal-line {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
 .terminal-prompt {
     color: #64ffda;
-    font-weight: 600;
-    margin-right: 4px;
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    display: inline-block;
+    font-weight: 500;
 }
 
 .typing {
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    display: inline-block;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Fix: Prevent inline collapse during typing animation */
+.typing::before {
+    content: "\00a0";
 }
 
 .terminal-cursor {
-    display: inline-block;
-    margin-left: 2px;
-    animation: blink 1s infinite;
-    color: #64ffda;
-    font-weight: 600;
-    text-shadow: 0 0 6px #64ffda;
+    font-family: "JetBrains Mono", monospace;
 }
-
 @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
 }
 
+.terminal-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
+.terminal-line {
+    width: 38ch;   /* EXACT width of longest line */
+}
+
+}
+
+.terminal-prompt,
+.typing,
+.terminal-cursor {
+    line-height: 1.2;
+}
 
 .architecture-diagram {
   max-width: 100%;
@@ -130,6 +196,14 @@ section.show{opacity:1;transform:none}
 footer{text-align:center;padding:45px;color:#94a3b8}
 
 @media(max-width:768px){.hero h1{font-size:36px}nav{gap:8px;padding:10px 14px}nav a{font-size:12px}}
+
+
+@media (max-width: 900px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -148,7 +222,15 @@ footer{text-align:center;padding:45px;color:#94a3b8}
 <section id="home" class="hero show">
   <img src="profile_avatar.jpg" class="avatar" />
   <h1>Hello, I'm <span>Zeeshan Ahmad</span></h1>
-  <div class="typing"></div>
+  <div class="terminal-wrapper">
+  <div class="terminal-line">
+    <span class="terminal-prompt">zeeshan@cloud:~$</span>
+    <span class="typing"></span>
+    <span class="terminal-cursor">▮</span>
+  </div>
+</div>
+<!-- Spacer -->
+<div style="height:25px; clear:both;"></div>
   <div class="location">📍 Gurugram, India</div>
   <div class="tagline">"Building scalable, secure, and reliable cloud environments."</div>
   <div class="btns">
@@ -326,75 +408,97 @@ footer{text-align:center;padding:45px;color:#94a3b8}
 
   <div class="projects">
 
-    <div class="p-card">
-  <i class="fas fa-cloud"></i>
+  <div class="p-card">
+<i class="fas fa-cloud"></i>
   <div>
     <h3>Cloud Infrastructure & Architecture</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Design, build, and manage scalable, secure, and highly available cloud infrastructure using AWS, Azure, and GCP. Implement fault-tolerant architectures, networking, IAM policies, and cost-optimized resource provisioning.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="Cloud-Infrastructure-and-Architecture.png" alt="Cloud Infrastructure" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-code-branch"></i>
+  <div class="p-card">
+<i class="fas fa-code-branch"></i>
   <div>
     <h3>CI/CD Pipeline Automation</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Develop and maintain robust CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI, and Azure DevOps to automate build, test, and deployment workflows, reducing release cycles and improving deployment reliability.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="CICD-Pipeline-Automation.png" alt="CI/CD Pipeline" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-cubes"></i>
+  <div class="p-card">
+<i class="fas fa-cubes"></i>
   <div>
     <h3>Containerization & Orchestration</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Containerize applications using Docker and orchestrate workloads using Kubernetes to enable scalable microservices architectures, zero-downtime deployments, and efficient resource utilization.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="Containerization-and-Orchestration.png" alt="Containerization & Orchestration" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-layer-group"></i>
+  <div class="p-card">
+<i class="fas fa-layer-group"></i>
   <div>
     <h3>Infrastructure as Code (IaC)</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Automate infrastructure provisioning using Terraform, CloudFormation, and Ansible to create reproducible, version-controlled, and scalable cloud environments.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="Infrastructure-as-Code-IaC.png" alt="Infrastructure as Code" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-chart-line"></i>
+  <div class="p-card">
+ <i class="fas fa-chart-line"></i>
   <div>
     <h3>Monitoring, Logging & Observability</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Implement monitoring and logging solutions using Prometheus, Grafana, ELK Stack, Datadog, and Cloud-native tools to ensure system reliability, performance optimization, and proactive incident detection.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="Monitoring-Logging-and-Observability.png" alt="Monitoring & Observability" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-coins"></i>
+  <div class="p-card">
+<i class="fas fa-coins"></i>
   <div>
     <h3>Performance Optimization & Cost Management</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Optimize system performance, improve deployment efficiency, reduce infrastructure costs, and implement auto-scaling strategies to balance reliability and cost.
     </p>
   </div>
-</div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="Performance-Optimization-and-Cost-Management.png" alt="Performance Optimization" class="p-img">
+  </div>
 
-<div class="p-card">
-  <i class="fas fa-shield-alt"></i>
+  <div class="p-card">
+<i class="fas fa-shield-alt"></i>
   <div>
     <h3>System Reliability & Incident Management</h3>
     <p style="margin-top:8px;color:#cbd5f5;line-height:1.65">
       Design highly available systems, implement disaster recovery strategies, and manage incidents using alerting, runbooks, and root cause analysis to ensure maximum uptime.
     </p>
-
   </div>
+<!-- Spacer -->
+<div style="height:15px; clear:both;"></div>
+    <img src="System-Reliability-and-Incident-Management.png" alt="System Reliability" class="p-img">
+  </div>
+
 </div>
 
 
@@ -498,29 +602,6 @@ let deleting = false;
 // Select your typing span
 const el = document.querySelector(".typing");
 
-// Create a prompt before typing span
-let prompt = document.querySelector(".terminal-prompt");
-if (!prompt) {
-    prompt = document.createElement("span");
-    prompt.className = "terminal-prompt";
-    prompt.textContent = "zeeshan@cloud:~$ ";
-    el.before(prompt);
-}
-
-// Create cursor after typing span
-let cursor = document.querySelector(".terminal-cursor");
-if (!cursor) {
-    cursor = document.createElement("span");
-    cursor.className = "terminal-cursor";
-    cursor.textContent = "▮";
-    el.after(cursor);
-}
-
-// Fix width so no clipping
-const maxLength = Math.max(...words.map(w => w.length)) + 3; // buffer
-el.style.display = "inline-block";
-el.style.minWidth = `${maxLength}ch`;
-el.style.whiteSpace = "pre"; // preserve spaces
 
 (function type() {
     const word = words[wordIndex];
