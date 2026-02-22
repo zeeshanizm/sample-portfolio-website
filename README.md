@@ -1,39 +1,33 @@
-# 🚀 Zeeshan Ahmad — DevOps Engineer Portfolio
+# Zeeshan Ahmad — DevOps Engineer Portfolio
 
-This repository contains the source code for my personal portfolio website, showcasing my professional experience, technical expertise, and key projects in **DevOps, Cloud Infrastructure, and Platform Engineering**.
+This repository hosts my **personal portfolio website**, highlighting my professional experience, technical skills, and key achievements in **DevOps, Cloud Infrastructure, and Platform Engineering**.
 
-## 👨‍💻 About Me
-I am a seasoned **DevOps Engineer and IT Infrastructure Consultant** with 10+ years of experience in designing, building, and operating **scalable, secure, and high-availability cloud platforms**. I specialize in cloud-native architectures, Kubernetes orchestration, CI/CD automation, and Infrastructure as Code (IaC).
+## Profile Summary
+Experienced **DevOps Engineer & IT Infrastructure Consultant** with **10+ years** of expertise in building **secure, scalable, and high-availability cloud platforms**. Strong background in **AWS, Azure, Kubernetes, CI/CD automation, and Infrastructure as Code**, with a proven track record of improving system reliability, accelerating delivery pipelines, and optimizing infrastructure cost.
 
-## 🔧 Tech Stack & Tools
+## Core Skills
 - **Cloud Platforms:** AWS, Microsoft Azure  
-- **Containerization & Orchestration:** Docker, Kubernetes  
+- **Containers & Orchestration:** Docker, Kubernetes  
 - **CI/CD & Automation:** Jenkins, GitHub Actions, GitOps  
 - **Infrastructure as Code:** Terraform  
 - **Monitoring & Observability:** Prometheus, Grafana, ELK  
-- **OS & Networking:** Linux, Networking, Security  
+- **Operating Systems:** Linux  
+- **Networking & Security:** Enterprise networking, DevSecOps best practices  
 
-## 🌐 Live Portfolio
-🔗 **Website:** https://zeeshanizm.github.io/
+## Key Achievements
+- Delivered **99.98% production uptime** across enterprise-grade cloud platforms  
+- Improved **deployment speed by 75%** using CI/CD automation and GitOps workflows  
+- Reduced **cloud infrastructure costs by 40%** through optimization and automation  
+- Designed and supported **Kubernetes platforms hosting 100+ microservices**  
 
-## ✨ Key Highlights
-- Designed and operated **highly available multi-cloud infrastructure** with **99.98% uptime**
-- Improved deployment speed by **75% using automated CI/CD pipelines**
-- Reduced cloud infrastructure costs by **40% through optimization and automation**
-- Built scalable Kubernetes platforms supporting **100+ microservices**
+## Live Portfolio
+🌐 **Website:** https://zeeshanizm.github.io/
 
-## 📁 Repository Purpose
-This repository hosts the **frontend source code** of my portfolio website, including:
-- Modern UI design
-- Responsive layout
-- Performance optimizations
-- Clean, production-grade HTML/CSS/JS
-
-## 📬 Contact
-- **Email:** zeeshan.ahmad413@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/zeeshanizm/  
-- **GitHub:** https://github.com/zeeshanizm  
+## Contact
+📧 **Email:** zeeshan.ahmad413@gmail.com  
+🔗 **LinkedIn:** https://www.linkedin.com/in/zeeshanizm/  
+🐙 **GitHub:** https://github.com/zeeshanizm  
 
 ---
 
-⭐ If you find this portfolio helpful or inspiring, feel free to star the repository!
+⭐ If this portfolio aligns with your hiring needs, feel free to connect.
